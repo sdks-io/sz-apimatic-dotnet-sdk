@@ -10,24 +10,24 @@ REST API for the Seltz platform: context retrieval (`/v1/search`), RAG answers (
 If you are building with .NET CLI tools then you can also use the following command:
 
 ```bash
-dotnet add package SzApimaticSDK --version 0.0.1
+dotnet add package StzApimaticSDK --version 0.0.2
 ```
 
 You can also view the package at:
-https://www.nuget.org/packages/SzApimaticSDK/0.0.1
+https://www.nuget.org/packages/StzApimaticSDK/0.0.2
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
 | Timeout | `TimeSpan` | Http client timeout.<br>*Default*: `TimeSpan.FromSeconds(30)` |
-| HttpClientConfiguration | [`Action<HttpClientConfiguration.Builder>`](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/http-client-configuration-builder.md) | Action delegate that configures the HTTP client by using the HttpClientConfiguration.Builder for customizing API call settings.<br>*Default*: `new HttpClient()` |
-| LogBuilder | [`LogBuilder`](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/log-builder.md) | Represents the logging configuration builder for API calls |
-| CustomHeaderAuthenticationCredentials | [`CustomHeaderAuthenticationCredentials`](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/auth/custom-header-signature.md) | The Credentials Setter for Custom Header Signature |
+| HttpClientConfiguration | [`Action<HttpClientConfiguration.Builder>`](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/http-client-configuration-builder.md) | Action delegate that configures the HTTP client by using the HttpClientConfiguration.Builder for customizing API call settings.<br>*Default*: `new HttpClient()` |
+| LogBuilder | [`LogBuilder`](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/log-builder.md) | Represents the logging configuration builder for API calls |
+| CustomHeaderAuthenticationCredentials | [`CustomHeaderAuthenticationCredentials`](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/auth/custom-header-signature.md) | The Credentials Setter for Custom Header Signature |
 
 The API client can be initialized as follows:
 
@@ -75,47 +75,47 @@ var client = SeltzApiClient
     .FromConfiguration(configuration.GetSection("SeltzApi"));
 ```
 
-See the [Configuration-Based Initialization](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/configuration-based-initialization.md) section for details.
+See the [Configuration-Based Initialization](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/configuration-based-initialization.md) section for details.
 
 ## Authorization
 
 This API uses the following authentication schemes.
 
-* [`ApiKeyAuth (Custom Header Signature)`](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/auth/custom-header-signature.md)
+* [`ApiKeyAuth (Custom Header Signature)`](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/auth/custom-header-signature.md)
 
 ## List of APIs
 
-* [Search](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/controllers/search.md)
-* [Answer](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/controllers/answer.md)
-* [Monitors](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/controllers/monitors.md)
-* [Records](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/controllers/records.md)
-* [Runs](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/controllers/runs.md)
-* [Agent](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/controllers/agent.md)
-* [Fetch](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/controllers/fetch.md)
+* [Search](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/controllers/search.md)
+* [Answer](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/controllers/answer.md)
+* [Monitors](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/controllers/monitors.md)
+* [Records](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/controllers/records.md)
+* [Runs](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/controllers/runs.md)
+* [Agent](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/controllers/agent.md)
+* [Fetch](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/controllers/fetch.md)
 
 ## SDK Infrastructure
 
 ### Configuration
 
-* [Configuration-Based Initialization](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/configuration-based-initialization.md)
-* [HttpClientConfiguration](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/http-client-configuration.md)
-* [HttpClientConfigurationBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/http-client-configuration-builder.md)
-* [LogBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/log-builder.md)
-* [LogRequestBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/log-request-builder.md)
-* [LogResponseBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/log-response-builder.md)
-* [ProxyConfigurationBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/proxy-configuration-builder.md)
+* [Configuration-Based Initialization](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/configuration-based-initialization.md)
+* [HttpClientConfiguration](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/http-client-configuration.md)
+* [HttpClientConfigurationBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/http-client-configuration-builder.md)
+* [LogBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/log-builder.md)
+* [LogRequestBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/log-request-builder.md)
+* [LogResponseBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/log-response-builder.md)
+* [ProxyConfigurationBuilder](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/proxy-configuration-builder.md)
 
 ### HTTP
 
-* [HttpCallback](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/http-callback.md)
-* [HttpContext](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/http-context.md)
-* [HttpRequest](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/http-request.md)
-* [HttpResponse](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/http-response.md)
-* [HttpStringResponse](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/http-string-response.md)
+* [HttpCallback](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/http-callback.md)
+* [HttpContext](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/http-context.md)
+* [HttpRequest](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/http-request.md)
+* [HttpResponse](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/http-response.md)
+* [HttpStringResponse](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/http-string-response.md)
 
 ### Utilities
 
-* [ApiException](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/api-exception.md)
-* [ApiResponse](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/api-response.md)
-* [ApiHelper](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.1/doc/api-helper.md)
+* [ApiException](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/api-exception.md)
+* [ApiResponse](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/api-response.md)
+* [ApiHelper](https://www.github.com/sdks-io/sz-apimatic-dotnet-sdk/tree/0.0.2/doc/api-helper.md)
 
